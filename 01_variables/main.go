@@ -30,4 +30,16 @@ func main() {
 	//shorthand
 	name, age := "Roland", 25
 	fmt.Println(name, age)
+
+	definingMultipleVariables()
+}
+
+func definingMultipleVariables() {
+	var (
+		name = "Roland"
+		age  = 25
+	)
+
+	fmt.Println(name)
+	fmt.Println(age)
 }
