@@ -32,6 +32,13 @@ func main() {
 	fmt.Println(name, age)
 
 	definingMultipleVariables()
+
+	funcInVariable := func() {
+		fmt.Printf("Hello from function")
+	}
+
+	funcInVariable()
+
 }
 
 func definingMultipleVariables() {
