@@ -6,6 +6,10 @@ var g int
 
 func main() {
 	const LEGTH int = 10
+	const (
+		pi = 3.14
+		//...
+	)
 
 	var a int
 	a = 1
