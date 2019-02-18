@@ -24,4 +24,10 @@ func main() {
 	fmt.Println(z)
 	fmt.Printf("len: %d\n", len(z)) //1
 	fmt.Printf("cap: %d\n", cap(z)) //1
+
+	u := []string{"apple", "grape"}
+	u = append(u, x...)
+	fmt.Println(u)
+	fmt.Printf("len: %d\n", len(u)) //5
+	fmt.Printf("cap: %d\n", cap(u)) //5
 }
