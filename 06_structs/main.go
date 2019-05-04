@@ -10,12 +10,14 @@ func main() {
 	var circle1 Circle
 	circle2 := new(Circle) // returns a pointer. (*Circle)
 	circle3 := Circle{x: 0, y: 0, r: 0}
-	circle4 := Circle{0, 0, 0}
+	circle4 := Circle{0, 0, 0, Name{"neastedType"}}
 
 	fmt.Println(circle1) //{0 0 0}
 	fmt.Println(circle2) //&{0 0 0}
 	fmt.Println(circle3) //{0 0 0}
 	fmt.Println(circle4) //{0 0 0}
+
+	fmt.Println(circle4.getName())
 
 	var c Circle
 	c.x, c.y, c.r = 1, 13, 7
@@ -40,6 +42,11 @@ type Area interface {
 
 type Circle struct {
 	x, y, r float64
+	Name
+}
+
+type Name struct {
+	name string
 }
 
 func (c *Circle) print() string {
@@ -48,6 +55,11 @@ func (c *Circle) print() string {
 
 func (c *Circle) getArea() float64 {
 	return math.Pi * c.r * c.r
+}
+
+func (c *Circle) getName() string {
+	//nested struct fields promoted
+	return c.name
 }
 
 func circleCopied(c Circle) {
